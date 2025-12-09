@@ -1,0 +1,390 @@
+/* 
+    Name: Everest Greenacre
+    ID: 0875795
+    Date: 12-03-25
+*/
+
+/* Full CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* Font */
+@font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    src: url(../font/Caveat-VariableFont_wght.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'QLD';
+    font-style: normal;
+    src: url(../font/EduQLDHand-VariableFont_wght.ttf) format('truetype');
+}
+
+/* Graphics */
+html {
+    background-image: linear-gradient(to left, #72e5ff, #ff68eb, #ffffff, #ff68eb, #72e5ff);
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'QLD', 'Courier New', monospace;
+    color: #2a2a2a;
+    line-height: 1.6;
+    padding: 20px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+main, nav, footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* Nav Bar */
+nav {
+    background: #fff;
+    border: 4px solid #2a2a2a;
+    border-radius: 0;
+    padding: 15px 25px;
+    margin-bottom: 40px;
+    box-shadow: 
+        8px 8px 0 rgba(0, 0, 0, 0.2),
+        inset 0 0 0 2px #ff68eb;
+    transform: rotate(-0.5deg);
+    position: relative;
+}
+
+nav::after {
+    content: '>_<';
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #72e5ff;
+    padding: 5px 15px;
+    border: 3px solid #2a2a2a;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: rotate(3deg);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav li {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    font-weight: bold;
+    position: relative;
+    text-transform: lowercase;
+}
+
+nav li::before {
+    content: '★';
+    margin-right: 5px;
+    color: #ff68eb;
+}
+
+nav a {
+    color: #2a2a2a;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    transform: scale(1.1) rotate(-2deg);
+    color: #ff68eb;
+}
+
+/* Text Styles */
+h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #2a2a2a;
+    text-transform: lowercase;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+h2::after {
+    content: ' (•̀ᴗ•́)و';
+    font-size: 2rem;
+    color: #ff68eb;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border: 5px dashed #2a2a2a;
+    box-shadow: 
+        12px 12px 0 rgba(255, 104, 235, 0.3),
+        -12px -12px 0 rgba(114, 229, 255, 0.3);
+    position: relative;
+}
+
+main::before {
+    content: '♪( ´▽｀)';
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    background: #fff;
+    padding: 8px 20px;
+    border: 3px solid #2a2a2a;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transform: rotate(-5deg);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Figure Styles */
+figure {
+    flex: 1 1 400px;
+    max-width: 500px;
+    background: #fff;
+    border: 5px solid #2a2a2a;
+    padding: 20px;
+    box-shadow: 
+        10px 10px 0 rgba(255, 104, 235, 0.3),
+        -5px -5px 0 rgba(114, 229, 255, 0.2);
+    transform: rotate(-1deg);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+figure:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+figure:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 
+        15px 15px 0 rgba(255, 104, 235, 0.5),
+        -8px -8px 0 rgba(114, 229, 255, 0.4);
+    z-index: 10;
+}
+
+figure::before {
+    content: '◆';
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: #ff68eb;
+    color: #fff;
+    padding: 5px 15px;
+    border: 3px solid #2a2a2a;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+figure:nth-child(even)::before {
+    background: #72e5ff;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #2a2a2a;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 0 rgba(255, 104, 235, 0.4);
+}
+
+figcaption {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 104, 235, 0.1);
+    border-left: 4px solid #ff68eb;
+    border-right: 4px solid #72e5ff;
+    text-transform: lowercase;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 25px;
+    background: #2a2a2a;
+    color: #fff;
+    border: 5px solid #fff;
+    box-shadow: 
+        0 -8px 0 #ff68eb,
+        0 -16px 0 #72e5ff;
+    position: relative;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+}
+
+footer::before {
+    content: '★━━━━━━━━★';
+    display: block;
+    margin-bottom: 10px;
+    color: #ff68eb;
+    letter-spacing: 3px;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 3px solid #fff;
+    background: transparent;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+    position: relative;
+}
+
+footer .social-links a:hover {
+    background: #fff;
+    color: #2a2a2a;
+    transform: scale(1.1) rotate(-3deg);
+    box-shadow: 5px 5px 0 rgba(255, 104, 235, 0.6);
+}
+
+footer .social-links a[href*="github"]::before {
+    content: '< >';
+    margin-right: 8px;
+    color: #72e5ff;
+}
+
+footer .social-links a[href*="instagram"]::before {
+    content: '♥';
+    margin-right: 8px;
+    color: #ff68eb;
+}
+
+footer .social-links a[href*="twitter"]::before,
+footer .social-links a[href*="x.com"]::before {
+    content: '★';
+    margin-right: 8px;
+    color: #72e5ff;
+}
+
+footer p {
+    background: none;
+    border: none;
+    box-shadow: none;
+    transform: none;
+    padding: 10px 0;
+    margin: 10px 0 0 0;
+}
+
+footer::after {
+    content: '(｡♥‿♥｡)';
+    display: block;
+    margin-top: 10px;
+    color: #72e5ff;
+    font-size: 1.5rem;
+}
+
+/* Custom Cursor */
+body {
+    cursor: url(../cursor/normal\ select.cur), auto;
+}
+
+/* Cursor for clickable elements */
+button,
+input[type="submit"],
+nav li a {
+    cursor: url(../cursor/link\ select.cur), pointer;
+}
+
+/* Cursor for images */
+img {
+    cursor: url(../cursor/link\ select.cur), pointer;
+}
+
+/* Cursor for clicking */
+*:active {
+    cursor: url(../cursor/precision\ select.cur), auto !important;
+}
+
+a:active,
+button:active,
+img:active,
+nav li:active {
+    cursor: url(../cursor/precision\ select.cur), pointer !important;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    figure {
+        flex: 1 1 100%;
+    }
+}

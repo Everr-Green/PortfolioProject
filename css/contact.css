@@ -1,0 +1,420 @@
+/* 
+    Name: Everest Greenacre
+    ID: 0875795
+    Date: 12-04-25
+    Page: Contact
+*/
+
+/* Full CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* Font */
+@font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    src: url(../font/Caveat-VariableFont_wght.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'QLD';
+    font-style: normal;
+    src: url(../font/EduQLDHand-VariableFont_wght.ttf) format('truetype');
+}
+
+/* Graphics */
+html {
+    background-image: linear-gradient(to left, #72e5ff, #ff68eb, #ffffff, #ff68eb, #72e5ff);
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'QLD', 'Courier New', monospace;
+    color: #2a2a2a;
+    line-height: 1.6;
+    padding: 20px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+main, nav, footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* Nav Bar */
+nav {
+    background: #fff;
+    border: 4px solid #2a2a2a;
+    border-radius: 0;
+    padding: 15px 25px;
+    margin-bottom: 40px;
+    box-shadow: 
+        8px 8px 0 rgba(0, 0, 0, 0.2),
+        inset 0 0 0 2px #ff68eb;
+    transform: rotate(-0.5deg);
+    position: relative;
+}
+
+nav::after {
+    content: '>_<';
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #72e5ff;
+    padding: 5px 15px;
+    border: 3px solid #2a2a2a;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: rotate(3deg);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav li {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    font-weight: bold;
+    position: relative;
+    text-transform: lowercase;
+}
+
+nav li::before {
+    content: '★';
+    margin-right: 5px;
+    color: #ff68eb;
+}
+
+nav a {
+    color: #2a2a2a;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    transform: scale(1.1) rotate(-2deg);
+    color: #ff68eb;
+}
+
+/* Main Content */
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 50px 40px;
+    border: 5px dashed #2a2a2a;
+    box-shadow: 
+        12px 12px 0 rgba(255, 104, 235, 0.3),
+        -12px -12px 0 rgba(114, 229, 255, 0.3);
+    position: relative;
+}
+
+main::before {
+    content: '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧';
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    background: #fff;
+    padding: 8px 20px;
+    border: 3px solid #2a2a2a;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transform: rotate(-5deg);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+section {
+    position: relative;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+form::before {
+    content: 'Contact Me =3';
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #2a2a2a;
+    margin-bottom: 10px;
+    text-transform: lowercase;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: 'QLD', monospace;
+    padding: 15px 20px;
+    border: 4px solid #2a2a2a;
+    background: #fff;
+    font-size: 1.1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+    transform: rotate(-0.5deg);
+}
+
+input[type="text"]:nth-of-type(even),
+input[type="email"]:nth-of-type(even) {
+    transform: rotate(0.5deg);
+}
+
+input[type="text"]::placeholder {
+    content: 'your name...';
+}
+
+input[type="email"]::placeholder {
+    content: 'your email...';
+}
+
+textarea::placeholder {
+    content: 'your message...';
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ff68eb;
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 
+        8px 8px 0 rgba(255, 104, 235, 0.4),
+        -3px -3px 0 rgba(114, 229, 255, 0.3);
+    background: #fffef0;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+    border-color: #72e5ff;
+    box-shadow: 7px 7px 0 rgba(114, 229, 255, 0.3);
+}
+
+textarea {
+    min-height: 200px;
+    resize: vertical;
+    font-family: 'QLD', monospace;
+}
+
+button[type="submit"] {
+    background: #ff68eb;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: lowercase;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    padding: 18px 40px;
+    border: 4px solid #2a2a2a;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+    transform: rotate(-1deg);
+    position: relative;
+}
+
+button[type="submit"]::before {
+    margin-right: 10px;
+    font-size: 2rem;
+}
+
+button[type="submit"]::after {
+    margin-left: 10px;
+    font-size: 2rem;
+}
+
+button[type="submit"]:hover {
+    background: #72e5ff;
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98) rotate(0deg);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Add labels with pseudo-elements */
+input[type="text"] {
+    position: relative;
+}
+
+form input[type="text"]::before {
+    content: 'name:';
+    position: absolute;
+    top: -25px;
+    left: 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    color: #ff68eb;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 25px;
+    background: #2a2a2a;
+    color: #fff;
+    border: 5px solid #fff;
+    box-shadow: 
+        0 -8px 0 #ff68eb,
+        0 -16px 0 #72e5ff;
+    position: relative;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+}
+
+footer::before {
+    content: '★━━━━━━━━★';
+    display: block;
+    margin-bottom: 10px;
+    color: #ff68eb;
+    letter-spacing: 3px;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 3px solid #fff;
+    background: transparent;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+    position: relative;
+}
+
+footer .social-links a:hover {
+    background: #fff;
+    color: #2a2a2a;
+    transform: scale(1.1) rotate(-3deg);
+    box-shadow: 5px 5px 0 rgba(255, 104, 235, 0.6);
+}
+
+footer .social-links a[href*="github"]::before {
+    content: '< >';
+    margin-right: 8px;
+    color: #72e5ff;
+}
+
+footer .social-links a[href*="instagram"]::before {
+    content: '♥';
+    margin-right: 8px;
+    color: #ff68eb;
+}
+
+footer .social-links a[href*="twitter"]::before,
+footer .social-links a[href*="x.com"]::before {
+    content: '★';
+    margin-right: 8px;
+    color: #72e5ff;
+}
+
+footer p {
+    background: none;
+    border: none;
+    box-shadow: none;
+    transform: none;
+    padding: 10px 0;
+    margin: 10px 0 0 0;
+}
+
+footer::after {
+    content: '(｡♥‿♥｡)';
+    display: block;
+    margin-top: 10px;
+    color: #72e5ff;
+    font-size: 1.5rem;
+}
+
+/* Custom Cursor */
+body {
+    cursor: url(../cursor/normal\ select.cur), auto;
+}
+
+/* Cursor for clickable elements */
+button,
+input[type="submit"],
+nav li a {
+    cursor: url(../cursor/link\ select.cur), pointer;
+}
+
+/* Cursor for images */
+img {
+    cursor: url(../cursor/link\ select.cur), pointer;
+}
+
+/* Cursor for clicking */
+*:active {
+    cursor: url(../cursor/precision\ select.cur), auto !important;
+}
+
+a:active,
+button:active,
+img:active,
+nav li:active {
+    cursor: url(../cursor/precision\ select.cur), pointer !important;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    main {
+        padding: 30px 20px;
+    }
+    
+    button[type="submit"] {
+        font-size: 1.6rem;
+    }
+}
